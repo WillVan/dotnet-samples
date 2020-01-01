@@ -37,7 +37,7 @@ namespace DumpHeapLive
             try
             {
                 ClrRuntime runtime = CreateRuntime(dump, dac);
-                ClrHeap heap = runtime.GetHeap();
+                ClrHeap heap = runtime.Heap;
 
                 ObjectSet liveObjs = null;
                 if (live)

@@ -59,7 +59,7 @@ namespace ClrStack
                 if (dso)
                 {
                     // We'll need heap data to find objects on the stack.
-                    ClrHeap heap = runtime.GetHeap();
+                    ClrHeap heap = runtime.Heap;
 
                     // Walk each pointer aligned address on the stack.  Note that StackBase/StackLimit
                     // is exactly what they are in the TEB.  This means StackBase > StackLimit on AMD64.

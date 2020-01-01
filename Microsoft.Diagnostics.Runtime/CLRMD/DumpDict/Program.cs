@@ -28,7 +28,7 @@ static class Program
             return;
         }
 
-        ClrHeap heap = runtime.GetHeap();
+        ClrHeap heap = runtime.Heap;
         ClrType type = heap.GetObjectType(obj);
 
         if (type == null)

@@ -32,7 +32,7 @@ namespace EEHeap
 
                 // To check whether obj is actually a valid object, we attempt to get its type.
                 // If the type is null then we do not have a valid object.
-                ClrHeap heap = runtime.GetHeap();
+                ClrHeap heap = runtime.Heap;
                 ClrType type = heap.GetObjectType(obj);
                 if (type == null)
                 {

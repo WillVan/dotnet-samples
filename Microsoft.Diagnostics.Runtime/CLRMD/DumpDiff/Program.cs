@@ -59,7 +59,7 @@ namespace DumpDiff
         {
             // Load one crash dump and build heap statistics.
             ClrRuntime runtime = CreateRuntime(dump, dac);
-            ClrHeap heap = runtime.GetHeap();
+            ClrHeap heap = runtime.Heap;
 
             var entries = new Dictionary<ClrType, Entry>();
 

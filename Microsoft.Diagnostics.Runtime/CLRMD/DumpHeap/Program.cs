@@ -46,7 +46,7 @@ namespace DumpHeap
                 // from the runtime.  Walk every segment in heap.Segments, and use
                 // ClrSegment.FirstObject and ClrSegment.NextObject to iterate through
                 // objects on that segment.
-                ClrHeap heap = runtime.GetHeap();
+                ClrHeap heap = runtime.Heap;
                 foreach (ClrSegment seg in heap.Segments)
                 {
                     for (ulong obj = seg.FirstObject; obj != 0; obj = seg.NextObject(obj))
